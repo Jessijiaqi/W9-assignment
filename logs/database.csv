@@ -1,12 +1,5 @@
-game_id: 1701233632.6480258
-winner: Human (Player X)
-num_moves: 5
-playerX_symbol: X
-playerO_symbol: O
-
-game_id: 1701233684.4917629
-winner: Human (Player X)
-num_moves: 7
-playerX_symbol: X
-playerO_symbol: O
-
+1701241611.566496,Human (Player X),5,X,O
+1701242205.2128582,Human (Player X),5,X,O
+1701242242.075259,Bot (Player O),6,X,O
+1701242266.4693367,Human (Player X),9,X,O
+1701242289.0301898,Human (Player X),5,X,O

@@ -13,7 +13,7 @@ def record_winner(text, filename, directory):
     f.write(text + '\n' + '\n')
 
 def dict_to_csv(data):
-  return '\n'.join([f'{key}: {value}' for key, value in data.items()])
+    return '\n'.join([f'{key}: {value}' for key, value in data.items()])
 
 game_data = {}
 
@@ -137,9 +137,27 @@ class Game:
         game_data['num_moves'] = self.calculate_total_moves()
         game_data['playerX_symbol'] = self._playerX.symbol
         game_data['playerO_symbol'] = self._playerO.symbol
+        # game_data = {
+        #     'game_id': self._game_id,
+        #     'winner': 'Human (Player X)' if winner == 'X' else 'Bot (Player O)' if winner == 'O' else 'Draw',
+        #     'num_moves': self.calculate_total_moves(),
+        #     'playerX_symbol': self._playerX.symbol,
+        #     'playerO_symbol': self._playerO.symbol
+        # }
 
-        csv_player_data = dict_to_csv(game_data)
-        record_winner(csv_player_data, "database.csv", "logs")
+        # csv_player_data = dict_to_csv(game_data)
+        # record_winner(csv_player_data, "database.csv", "logs")
+
+        # pprint(game_data)
+        # pd.DataFrame(game_data).to_csv("log/database.csv")
+
+        
+        file_path = "logs/database.csv"
+        if not os.path.exists(file_path):
+            pd.DataFrame([game_data]).to_csv(file_path, index=False)  # Create the file if it doesn't exist
+        else:
+            pd.DataFrame([game_data]).to_csv(file_path, mode='a', header=False, index=False) 
+
 
     def calculate_total_moves(self):
         total_moves = 0
