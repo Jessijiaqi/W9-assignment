@@ -1,5 +1,8 @@
+game_id,winner,num_moves,playerX_symbol,playerO_symbol
 1701241611.566496,Human (Player X),5,X,O
 1701242205.2128582,Human (Player X),5,X,O
 1701242242.075259,Bot (Player O),6,X,O
 1701242266.4693367,Human (Player X),9,X,O
 1701242289.0301898,Human (Player X),5,X,O
+1701681419.4903047,Human (Player X),7,X,O
+1701681459.3374236,Human (Player X),7,X,O
